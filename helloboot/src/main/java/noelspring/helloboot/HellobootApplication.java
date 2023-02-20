@@ -25,6 +25,8 @@ public class HellobootApplication {
 		//SpringApplication.run(HellobootApplication.class, args);
 		TomcatServletWebServerFactory tomcatServletWebServerFactory = new TomcatServletWebServerFactory();
 		WebServer webServer = tomcatServletWebServerFactory.getWebServer(servletContext -> {
+
+			HelloController helloController = new HelloController();
 			servletContext.addServlet("front controller", new HttpServlet() {
 
 				@Override
@@ -32,9 +34,12 @@ public class HellobootApplication {
 					// 인증, 보안, 다국어, 공통 기능 ~~
 					if (req.getRequestURI().equals("/hello") && req.getMethod().equals(HttpMethod.GET.name())) {
 						String name = req.getParameter("name");
+
+						String ret = helloController.hello(name);
+
 						resp.setStatus(HttpStatus.OK.value());
 						resp.setHeader(HttpHeaders.CONTENT_TYPE, MediaType.TEXT_PLAIN_VALUE);
-						resp.getWriter().print("Hello " + name);
+						resp.getWriter().print(ret);
 					} else if (req.getRequestURI().equals("/user")) {
 
 					} else {
