@@ -1,6 +1,5 @@
 package noelspring.helloboot;
 
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 
 @Service
