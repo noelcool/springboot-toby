@@ -25,19 +25,23 @@ import java.io.IOException;
 public class HellobootApplication {
 
 	public static void main(String[] args) {
-		GenericWebApplicationContext applicationContext = new GenericWebApplicationContext();
+		GenericWebApplicationContext applicationContext = new GenericWebApplicationContext() {
+			@Override
+			protected void onRefresh() {
+				super.onRefresh();
+				TomcatServletWebServerFactory tomcatServletWebServerFactory = new TomcatServletWebServerFactory();
+				WebServer webServer = tomcatServletWebServerFactory.getWebServer(servletContext -> {
+					servletContext.addServlet("dispatcherServlet",
+							new DispatcherServlet(this)
+					).addMapping("/*");
+				});
+				webServer.start();
+
+			}
+		};
 		applicationContext.registerBean(HelloController.class);
 		applicationContext.registerBean(SimpleHelloService.class);
-
 		applicationContext.refresh();
-
-		TomcatServletWebServerFactory tomcatServletWebServerFactory = new TomcatServletWebServerFactory();
-		WebServer webServer = tomcatServletWebServerFactory.getWebServer(servletContext -> {
-			servletContext.addServlet("dispatcherServlet",
-					new DispatcherServlet(applicationContext)
-					).addMapping("/*");
-		});
-		webServer.start();
 	}
 
 }
