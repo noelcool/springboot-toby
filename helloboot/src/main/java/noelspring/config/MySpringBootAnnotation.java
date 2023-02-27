@@ -1,4 +1,4 @@
-package noelspring.helloboot;
+package noelspring.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -12,5 +12,6 @@ import java.lang.annotation.Target;
 @Target(ElementType.TYPE)
 @Configuration
 @ComponentScan
-public @interface MySpringbootAnnotation {
+@EnableMyAutoConfiguration
+public @interface MySpringBootAnnotation {
 }

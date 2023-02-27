@@ -1,8 +1,9 @@
 package noelspring.helloboot;
 
+import noelspring.config.MySpringBootAnnotation;
 import org.springframework.boot.SpringApplication;
 
-@MySpringbootAnnotation
+@MySpringBootAnnotation
 public class HellobootApplication {
 
 	public static void main(String[] args) {
