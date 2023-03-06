@@ -1,3 +1,4 @@
 noelspring.config.autoconfig.TomcatWebServerConfig
 noelspring.config.autoconfig.JettyWebServerConfig
 noelspring.config.autoconfig.DispatcherServletConfig
+noelspring.config.autoconfig.PropertyPlaceholderConfig
