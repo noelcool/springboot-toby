@@ -1,5 +1,8 @@
 package noelspring.config.autoconfig;
 
+import noelspring.config.MyConfigurationProperties;
+
+@MyConfigurationProperties(prefix = "server")
 public class ServerProperties {
 
     private String contextPath;
