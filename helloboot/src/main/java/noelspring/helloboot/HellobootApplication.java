@@ -8,7 +8,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.annotation.PostConstruct;
 
-@MySpringBootAnnotation
+@SpringBootApplication
 public class HellobootApplication {
 
 	private final JdbcTemplate jdbcTemplate;
