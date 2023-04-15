@@ -1,12 +1,9 @@
 package noelspring.helloboot;
 
-import noelspring.config.MySpringBootAnnotation;
-import org.springframework.beans.factory.annotation.Autowired;
+import jakarta.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.jdbc.core.JdbcTemplate;
-
-import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 public class HellobootApplication {
