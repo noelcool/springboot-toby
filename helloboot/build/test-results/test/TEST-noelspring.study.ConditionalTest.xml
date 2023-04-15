@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="noelspring.study.ConditionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-03-15T08:25:22" hostname="ip-192-168-219-111.ap-northeast-2.compute.internal" time="0.016">
+<testsuite name="noelspring.study.ConditionalTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2023-04-15T11:57:31" hostname="MacBook-Pro.local" time="0.064">
   <properties/>
-  <testcase name="conditional()" classname="noelspring.study.ConditionalTest" time="0.016"/>
+  <testcase name="conditional()" classname="noelspring.study.ConditionalTest" time="0.064"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

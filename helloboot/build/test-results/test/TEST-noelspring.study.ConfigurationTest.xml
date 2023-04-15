@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="noelspring.study.ConfigurationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-15T08:25:22" hostname="ip-192-168-219-111.ap-northeast-2.compute.internal" time="0.009">
+<testsuite name="noelspring.study.ConfigurationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-04-15T11:57:31" hostname="MacBook-Pro.local" time="0.034">
   <properties/>
   <testcase name="proxyCommontMethod()" classname="noelspring.study.ConfigurationTest" time="0.001"/>
-  <testcase name="configuration()" classname="noelspring.study.ConfigurationTest" time="0.005"/>
+  <testcase name="configuration()" classname="noelspring.study.ConfigurationTest" time="0.03"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
